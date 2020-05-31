@@ -1,0 +1,16 @@
+PODS:
+  - Cleanse (4.2.5)
+
+DEPENDENCIES:
+  - Cleanse
+
+SPEC REPOS:
+  trunk:
+    - Cleanse
+
+SPEC CHECKSUMS:
+  Cleanse: ae3cbed67721dadb5336b42ddb7ee1d1007e0e40
+
+PODFILE CHECKSUM: 0bb8480ccced124b2a540bb8172ec45e7f169fef
+
+COCOAPODS: 1.9.3
