@@ -15,7 +15,7 @@ protocol WeatherManagerDelegate {
 }
 
 struct WeatherManager {
-    let weatherUrl = "http://api.openweathermap.org/data/2.5/weather?appid=3438b6c3883505fb9ae0560fa0e34c4f"
+    let weatherUrl = "https://api.openweathermap.org/data/2.5/weather?appid=3438b6c3883505fb9ae0560fa0e34c4f&units=metric"
     
     var delegate: WeatherManagerDelegate?
     
@@ -25,7 +25,7 @@ struct WeatherManager {
     }
     
     func fetchWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
-        let urlString = "\(weatherUrl)&lat=\(latitude)&long=\(longitude)"
+        let urlString = "\(weatherUrl)&lat=\(latitude)&lon=\(longitude)"
         performRequest(with: urlString)
     }
     
@@ -39,8 +39,10 @@ struct WeatherManager {
                 self.delegate?.didFailedWithError(error: error!)
                 return
             }
-            if let data = data, let weather = self.parseJson(data) {
-                self.delegate?.didUpdateWeather(self, weather: weather)
+            if let data = data {
+              if let weather = self.parseJson(data) {
+                  self.delegate?.didUpdateWeather(self, weather: weather)
+              }
             }
         }
         task.resume()
