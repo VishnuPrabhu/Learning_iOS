@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GOu-ei-Ta5">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ReusableFrameworkTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_snow" translatesAutoresizingMaskIntoConstraints="NO" id="ktQ-Pi-JAY">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHO-eZ-LWg" customClass="CircularButton" customModule="ReusableFramework">
+                                <rect key="frame" x="146.66666666666666" y="618" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="0kU-gj-DfA"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="1Ci-fZ-aBQ"/>
+                                    <constraint firstAttribute="height" constant="100" id="5LS-vY-zKF"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="LOV-Im-k5T"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" systemColor="linkColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" systemColor="systemGreenColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineThickness">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidthPercentage">
+                                        <real key="value" value="0.59999999999999998"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W9J-Hv-ydi"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGK-oP-6lE" customClass="ProfileView" customModule="ReusableFramework">
+                                <rect key="frame" x="146.66666666666666" y="183" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="u8j-pC-GBe"/>
+                                    <constraint firstAttribute="height" constant="100" id="yB5-hy-SMG"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cr1-Ig-ckv">
+                                <rect key="frame" x="154" y="529" width="85" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="New VC"/>
+                                <connections>
+                                    <action selector="onNextButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VOd-BO-HPz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3d-dU-xH5">
+                                <rect key="frame" x="150.33333333333334" y="462" width="92.666666666666657" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="New VC1">
+                                    <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="tyo-bP-gqV" kind="show" id="5Tc-SO-qEF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ktQ-Pi-JAY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5gI-bc-0M2"/>
+                            <constraint firstItem="Cr1-Ig-ckv" firstAttribute="top" secondItem="f3d-dU-xH5" secondAttribute="bottom" constant="32" id="E8V-ef-0nm"/>
+                            <constraint firstItem="VHO-eZ-LWg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LZl-rw-D0M"/>
+                            <constraint firstItem="VHO-eZ-LWg" firstAttribute="top" secondItem="Cr1-Ig-ckv" secondAttribute="bottom" constant="54" id="QSs-qd-k5g"/>
+                            <constraint firstItem="ktQ-Pi-JAY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XZt-cW-KQ6"/>
+                            <constraint firstItem="f3d-dU-xH5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bIq-Ep-Z08"/>
+                            <constraint firstItem="fGK-oP-6lE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="eHg-0E-GTw"/>
+                            <constraint firstItem="fGK-oP-6lE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f8O-ZR-btT"/>
+                            <constraint firstItem="Cr1-Ig-ckv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lMM-PO-S1u"/>
+                            <constraint firstItem="ktQ-Pi-JAY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lcX-un-y8w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VHO-eZ-LWg" secondAttribute="bottom" constant="100" id="uGE-tH-vp4"/>
+                            <constraint firstAttribute="bottom" secondItem="ktQ-Pi-JAY" secondAttribute="bottom" id="wGD-aD-fX3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jko-hX-OWJ"/>
+                    <connections>
+                        <outlet property="profileView" destination="fGK-oP-6lE" id="5Tz-ux-4uQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1023.6641221374045" y="-28.169014084507044"/>
+        </scene>
+        <!--CustomTCV View Controller-->
+        <scene sceneID="fnE-x3-faa">
+            <objects>
+                <viewController id="tyo-bP-gqV" customClass="CustomTCVViewController" customModule="ReusableFramework" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lHv-ny-kvG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5Ze-im-Zd4">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PTT-QP-dZC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Ze-im-Zd4" firstAttribute="top" secondItem="PTT-QP-dZC" secondAttribute="top" id="2pa-yk-XKO"/>
+                            <constraint firstItem="PTT-QP-dZC" firstAttribute="bottom" secondItem="5Ze-im-Zd4" secondAttribute="bottom" id="n5R-bT-Jzo"/>
+                            <constraint firstItem="PTT-QP-dZC" firstAttribute="trailing" secondItem="5Ze-im-Zd4" secondAttribute="trailing" id="plO-iw-yJV"/>
+                            <constraint firstItem="5Ze-im-Zd4" firstAttribute="leading" secondItem="PTT-QP-dZC" secondAttribute="leading" id="x7d-TS-f3A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OOS-9L-tp6"/>
+                    <connections>
+                        <outlet property="tableView" destination="5Ze-im-Zd4" id="SW9-Gr-Dks"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="23w-4x-hWW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1781" y="-28"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Byz-Bd-X20">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GOu-ei-Ta5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nuA-oq-b3s">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="akx-AG-qJR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l8D-ww-EhB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96.946564885496173" y="-28.169014084507044"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="VHO-eZ-LWg">
+            <size key="intrinsicContentSize" width="24" height="14"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="ic_snow" width="390" height="460"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

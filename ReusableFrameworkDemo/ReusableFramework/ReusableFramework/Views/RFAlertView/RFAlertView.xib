@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RFAlertView" customModule="ReusableFramework" customModuleProvider="target">
+            <connections>
+                <outlet property="headingLabel" destination="K1U-Ue-Vxe" id="y9z-vX-yzM"/>
+                <outlet property="iconImage" destination="gU0-VQ-ulS" id="e6b-sl-wcD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <visualEffectView opaque="NO" contentMode="scaleToFill" id="Gnh-A3-gB8">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pOl-T5-M9o">
+                <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmL-W7-tHj">
+                        <rect key="frame" x="100" y="-30" width="50" height="50"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="f9j-Rw-XtM"/>
+                            <constraint firstAttribute="height" constant="50" id="uMl-hW-seJ"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="25"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gU0-VQ-ulS">
+                        <rect key="frame" x="50" y="36" width="150" height="150"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="OPz-Hk-hFF"/>
+                            <constraint firstAttribute="height" constant="150" id="S1O-GD-1u1"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1U-Ue-Vxe">
+                        <rect key="frame" x="16" y="202" width="218" height="32"/>
+                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gU0-VQ-ulS" firstAttribute="centerX" secondItem="pOl-T5-M9o" secondAttribute="centerX" id="FF0-tX-X6N"/>
+                    <constraint firstItem="hmL-W7-tHj" firstAttribute="centerX" secondItem="pOl-T5-M9o" secondAttribute="centerX" id="I1V-e4-uyB"/>
+                    <constraint firstAttribute="bottom" secondItem="K1U-Ue-Vxe" secondAttribute="bottom" constant="16" id="bK2-Lb-WH3"/>
+                    <constraint firstItem="K1U-Ue-Vxe" firstAttribute="top" secondItem="gU0-VQ-ulS" secondAttribute="bottom" constant="16" id="h0c-lv-CWD"/>
+                    <constraint firstItem="K1U-Ue-Vxe" firstAttribute="leading" secondItem="pOl-T5-M9o" secondAttribute="leading" constant="16" id="i3c-pe-UN5"/>
+                    <constraint firstAttribute="trailing" secondItem="K1U-Ue-Vxe" secondAttribute="trailing" constant="16" id="iqI-bG-fzp"/>
+                    <constraint firstItem="hmL-W7-tHj" firstAttribute="top" secondItem="pOl-T5-M9o" secondAttribute="top" constant="-30" id="oJe-Dr-rhg"/>
+                    <constraint firstItem="gU0-VQ-ulS" firstAttribute="top" secondItem="hmL-W7-tHj" secondAttribute="bottom" constant="16" id="q3O-dN-42j"/>
+                </constraints>
+            </view>
+            <blurEffect style="regular"/>
+            <point key="canvasLocation" x="93" y="-209"/>
+        </visualEffectView>
+    </objects>
+    <resources>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
